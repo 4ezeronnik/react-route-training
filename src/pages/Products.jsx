@@ -1,7 +1,11 @@
+import { ProductList } from "../components/ProductList";
+import { getProducts } from "fakeApi";
+
 export const Products = () => {
+    const products = getProducts();
     return (
         <main>
-            <h1>Products pages</h1>
+         <ProductList products={products}/>
         </main>
     );
 };
