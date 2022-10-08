@@ -6,7 +6,7 @@ export const Team = () => {
                     <b>CEO</b> - Gabrijela Vohu Manah
                 </li>
                 <li>
-                    <b>Sales</b> = Darius Marianne
+                    <b>Sales</b> - Darius Marianne
                 </li>
                 <li>
                     <b>Product</b> - Segdae Jean-Pierre
