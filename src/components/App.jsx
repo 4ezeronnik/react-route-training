@@ -7,6 +7,7 @@ import { Mission } from "./Mission";
 import { Team } from "./Team";
 import { Reviews } from "./Reviews";
 import { SharedLayout } from "./SharedLayout";
+import { NotFound } from "pages/NotFound";
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
         </Route>
         <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<ProductDetails />} />
+         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
