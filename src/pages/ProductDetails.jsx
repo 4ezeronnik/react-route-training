@@ -2,7 +2,7 @@ import { useParams, useLocation } from 'react-router-dom';
 import { getProductById } from 'fakeApi';
 import { BackLink } from 'components/BackLink';
 
-export const ProductDetails = () => {
+const ProductDetails = () => {
     const { id } = useParams();
     const product = getProductById(id);
     const location = useLocation();
@@ -27,4 +27,6 @@ export const ProductDetails = () => {
             </div>
         </main>
     );
-}
+};
+
+export default ProductDetails;

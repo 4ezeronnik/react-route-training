@@ -1,13 +1,16 @@
+import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
-import { About } from "../pages/About";
-import { Home } from "../pages/Home";
-import { ProductDetails } from "../pages/ProductDetails";
-import { Products } from "../pages/Products";
-import { Mission } from "./Mission";
-import { Team } from "./Team";
-import { Reviews } from "./Reviews";
 import { SharedLayout } from "./SharedLayout";
-import { NotFound } from "pages/NotFound";
+
+const createAsyncComponent = (path) => lazy(() => import(path));
+
+const Home = createAsyncComponent("../pages/Home")
+const About = createAsyncComponent("../pages/About");
+const ProductDetails = createAsyncComponent("../pages/ProductDetails");
+const Products = createAsyncComponent("../pages/Products");
+const Mission = createAsyncComponent("./Mission");
+const Team = createAsyncComponent("./Team");
+const Reviews = createAsyncComponent("./Reviews");
 
 export const App = () => {
   return (
@@ -21,7 +24,6 @@ export const App = () => {
         </Route>
         <Route path="products" element={<Products />} />
         <Route path="products/:id" element={<ProductDetails />} />
-         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
