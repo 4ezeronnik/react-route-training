@@ -4,7 +4,7 @@ import { SharedLayout } from "./SharedLayout";
 
 const createAsyncComponent = (path) => lazy(() => import(path));
 
-const Home = createAsyncComponent("../pages/Home")
+const Home = createAsyncComponent("../pages/Home");
 const About = createAsyncComponent("../pages/About");
 const ProductDetails = createAsyncComponent("../pages/ProductDetails");
 const Products = createAsyncComponent("../pages/Products");
