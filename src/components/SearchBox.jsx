@@ -1,6 +1,6 @@
 import { Wrapper, Input, Icon } from "./SearchBox.styled";
 
-export const SearchBox = ({ value, onChange }) => {
+const SearchBox = ({ value, onChange }) => {
   return (
     <Wrapper>
       <Icon />
@@ -12,3 +12,5 @@ export const SearchBox = ({ value, onChange }) => {
     </Wrapper>
   );
 };
+
+export default SearchBox;

@@ -2,15 +2,13 @@ import { lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import { SharedLayout } from "./SharedLayout";
 
-const createAsyncComponent = (path) => lazy(() => import(path));
-
-const Home = createAsyncComponent("../pages/Home");
-const About = createAsyncComponent("../pages/About");
-const ProductDetails = createAsyncComponent("../pages/ProductDetails");
-const Products = createAsyncComponent("../pages/Products");
-const Mission = createAsyncComponent("./Mission");
-const Team = createAsyncComponent("./Team");
-const Reviews = createAsyncComponent("./Reviews");
+const Home = lazy(() => import('../pages/Home'));
+const About = lazy(() => import('../pages/About')); 
+const ProductDetails = lazy(() => import('../pages/ProductDetails'));
+const Products = lazy(() => import('../pages/Products'));
+const Mission = lazy(() => import('./Mission'));
+const Team = lazy(() => import('./Team'));
+const Reviews = lazy(() => import('./Reviews'));
 
 export const App = () => {
   return (
